@@ -8,3 +8,9 @@
  */
 
 rootProject.name = 'evo-admin'
+include("evo-component-dto")
+include("evo-web-adapter")
+include("evo-web-app")
+include("evo-web-client")
+include("evo-web-domain")
+include("evo-web-infrastructure")
