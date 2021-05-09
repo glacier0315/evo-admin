@@ -1,0 +1,29 @@
+ext {
+    // spring cloud 和spring boot
+    springBootVersion = "2.6.1"
+
+    // 模板布局
+    thymeleafLayouVersion = "3.0.0"
+
+    // 数据库相关
+    druidVersion = '1.2.8'
+    dynamicDatasourceVersion = "3.5.0"
+
+    // 数据库操作
+    mybatisVersion = '2.2.0'
+    pagehelperVersion = '1.4.1'
+
+    // office
+    poiVerision = "5.1.0"
+
+    // 工具
+    commonsLang3Version = "3.12.0"
+    commonIoVersion = "2.11.0"
+    hutoolVersion = "5.7.17"
+    mapstructVersion = "1.4.2.Final"
+
+    // 日志
+    log4jVersion = "2.16.0"
+
+    junitVersion = '5.8.2'
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="include :: header('AdminLTE 3')"/>
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" th:href="@{js/plugins/icheck-bootstrap/icheck-bootstrap.min.css}">
+    <style>
+        .error {
+            color: red;
+            margin: 0.5em auto;
+        }
+    </style>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <b>Admin</b>LTE
+    </div>
+    <div class="card">
+        <div class="card-body login-card-body">
+            <p class="login-box-msg">登录</p>
+
+            <form th:action="@{/login}" method="post">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="username" placeholder="用户名">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" name="password" placeholder="密码">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="icheck-primary">
+                            <input type="checkbox" id="remember" name="rememberme">
+                            <label for="remember">
+                                Remember Me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center" th:if="${param.error}">
+                        <label class="error " th:if="${param.error}"
+                               th:text="${session.SPRING_SECURITY_LAST_EXCEPTION.message}"></label>
+                </div>
+                <div class="row">
+                    <div class="col-4 offset-4">
+                        <button type="submit" class="btn btn-primary btn-block">登录</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 依 赖 脚 本 -->
+<th:block th:include="include :: commonjs"/>
+</body>
+</html>
