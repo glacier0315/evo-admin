@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="include :: header('AdminLTE 3')"/>
+    <link rel="stylesheet" th:href="@{/js/bootstrap-table/1.18.3/bootstrap-table.min.css}">
+</head>
+</head>
+<body>
+
+
+<!-- 依 赖 脚 本 -->
+<th:block th:include="include :: commonjs"/>
+<script th:src="@{/js/bootstrap-table/1.18.3/bootstrap-table.min.js}"></script>
+</body>
+</html>

@@ -5,11 +5,16 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(":evo-web-app")
+    implementation project(":evo-web-domain")
 
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-security')
+
     // 模板
     implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
     implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:${thymeleafLayouVersion}")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

@@ -3,4 +3,12 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(":evo-web-domain")
+    // mybatis
+    implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisVersion}")
+    implementation("com.github.pagehelper:pagehelper-spring-boot-starter:${pagehelperVersion}")
+
+    implementation("com.alibaba:druid-spring-boot-starter:${druidVersion}")
+    runtimeOnly("mysql:mysql-connector-java")
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

@@ -3,4 +3,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     api project(":evo-component-dto")
+
+    implementation("org.apache.commons:commons-lang3:${commonsLang3Version}")
+    implementation("cn.hutool:hutool-core:${hutoolVersion}")
+    implementation("com.fasterxml.jackson.core:jackson-annotations")
 }

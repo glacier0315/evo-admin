@@ -4,4 +4,22 @@ dependencies {
 
     implementation project(":evo-web-domain")
     implementation project(":evo-web-infrastructure")
+
+    implementation('org.springframework.boot:spring-boot-starter')
+    implementation('org.springframework.security:spring-security-core')
+    // mybatis
+    implementation("com.github.pagehelper:pagehelper-spring-boot-starter:${pagehelperVersion}")
+
+    //
+    implementation("org.apache.commons:commons-lang3:${commonsLang3Version}")
+    implementation("cn.hutool:hutool-core:${hutoolVersion}")
+
+    // mapstruct
+    implementation("org.mapstruct:mapstruct:${mapstructVersion}")
+    annotationProcessor("org.mapstruct:mapstruct-processor:${mapstructVersion}")
+    testAnnotationProcessor("org.mapstruct:mapstruct-processor:${mapstructVersion}")
+
+    implementation("com.fasterxml.jackson.core:jackson-annotations")
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

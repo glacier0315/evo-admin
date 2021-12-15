@@ -2,5 +2,6 @@ dependencies {
     // 本地依赖
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-
+    implementation("cn.hutool:hutool-core:${hutoolVersion}")
+    implementation("com.fasterxml.jackson.core:jackson-annotations")
 }
